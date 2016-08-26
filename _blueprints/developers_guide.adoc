@@ -3,15 +3,16 @@
 == Adding new packages
 
 ALMighty uses https://glide.sh[Glide] for package management.  To
-install a new package, you can follow these steps.  The `<URL>` should
-be replaced with the package URL pointing to Github or any other
-location.
+install a new package, you can follow these steps.  The
+`<IMPORT_PATH>` should be replaced with the actual import path of the
+package. e.g., `github.com/robfig/cron`
 
 [source, bash]
-glide get <URL>
-glide update
+glide get <IMPORT_PATH>
 git add glide.yaml glide.lock
 git commit -m "<message>"
 
-NOTE: If the `glide get` commands prompts for versions range, most of the
-time you must select `M` (minor).
+If the `glide get` commands prompts for versions range, select the
+appropriate option.  And most of the time, you can select `M` (minor)
+as it will ensure non-breaking changes are not going to be retrieved
+(Ref. http://semver.org).
