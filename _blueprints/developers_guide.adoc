@@ -16,3 +16,18 @@ If the `glide get` commands prompts for versions range, select the
 appropriate option.  And most of the time, you can select `M` (minor)
 as it will ensure non-breaking changes are not going to be retrieved
 (Ref. http://semver.org).
+
+== FAQ
+
+=== How to see the SQL query used by Gorm?
+
+Add `Debug()` function call before  `Save()`, `Create()` etc.
+
+Two examples from ALMighty code:
+
+[source,go]
+if err := tx.Debug().Create(&tq).Error; err != nil {
+...
+if err := tx.Debug().Save(&newTq).Error; err != nil {
+
+WARNING: This debug function call should not be committed and pushed to upstream.
