@@ -32,6 +32,13 @@ User --> Notification: Recived/Viewed
 
 * All actions within the system could go to the notification service
 
+== Notification delivery mechanisms
+
+* Email Notification
+* In-app Toast Notification
+* https://www.w3.org/TR/notifications/[Web Notification]
+* https://www.w3.org/TR/push-api/[Push API]
+
 == References
 
 * https://medium.com/@intercom/designing-smart-notifications-36336b9c58fb#.ehe3vdiq6[Designing smart notifications
