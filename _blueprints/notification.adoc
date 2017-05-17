@@ -57,9 +57,19 @@ Table: notifications
 * id
 * user id
 * notification_type
-* notification
-* read
+* notification #JSONB 
+* read #boolean
 
+== What should trigger notification
+
+1. When user assigned a WI
+2. When new comment added for the assigned or created item
+3. When description changes for the assigned or created item
+
+== API
+
+Use WebSockets for API
+https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
 
 == References
 
