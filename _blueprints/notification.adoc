@@ -34,10 +34,32 @@ User --> Notification: Recived/Viewed
 
 == Notification delivery mechanisms
 
-* Email Notification
-* In-app Toast Notification
-* https://www.w3.org/TR/notifications/[Web Notification]
-* https://www.w3.org/TR/push-api/[Push API]
+1. In-app Toast Notification
+2. Email Notification
+3. https://www.w3.org/TR/notifications/[Web Notification]
+4. https://www.w3.org/TR/push-api/[Push API]
+
+=== In-app Toast Notification
+
+This type of notification will be displayed in the browser page after
+user logged in.
+
+== Database design
+
+
+Table: notification_types
+
+* id
+* name
+
+Table: notifications
+
+* id
+* user id
+* notification_type
+* notification
+* read
+
 
 == References
 
